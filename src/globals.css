@@ -1,0 +1,6 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    height: 100px;
+    background: white;
+    overflow: scroll;
+}
