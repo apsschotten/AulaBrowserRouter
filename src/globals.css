@@ -6,15 +6,16 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
+    width: 100%;
     background: rgb(245, 245, 245);
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 footer{
-    background-color: #27496d;
-    margin-bottom: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    background-color: #2c2c2c;
     margin-top: 35px;
-    border-radius: 0px 0px 25px 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,14 +23,14 @@ footer{
     align-self: center;
 }
 
-button:hover{
+.bCard:hover{
     transition: 0.5s;
     border: #27496d;
     background-color: #27496d;
     cursor: pointer;
 }
 
-button{
+.bCard{
     margin-top: 237px;
     height: 40px;
     width: 227px;
@@ -76,12 +77,39 @@ button{
     grid-template-columns: 225px 225px 225px;
     row-gap: 35px;
     column-gap: 35px;
-    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
 }
 
 li{
     color: #fff;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
 
+.bTop:hover{
+    transition: 0.5s;
+    background-color: #1c1c1c;
+    cursor: pointer;
+}
+
+.bTop{
+    background-color: #2c2c2c;
+    margin-top: 15px;
+    border: 0;
+}
+
+.bList{
+    display: grid;
+    grid-template-columns: 175px 175px 175px;
+    row-gap: 35px;
+}
+
+.iTop{
+    display: flex;
 }
 
 .hImage{
@@ -90,10 +118,17 @@ li{
 }
 
 header{
-    background-color: #27496d;
-    margin-top: 25px;
+    width: 100%;
+    background-color: #2c2c2c;
     margin-bottom: 35px;
-    border-radius: 25px 25px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+h1{
     display: flex;
     flex-direction: column;
     align-items: center;
