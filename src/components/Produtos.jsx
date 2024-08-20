@@ -23,7 +23,7 @@ export default function Produtos() {
         { id: 17, nome: 'Bandeira - DF - Distrito Federal - Brasília', preçoFF: 39.99, imagem: 'http://www.educadores.diaadia.pr.gov.br/modules/galeria/uploads/11/normal_1409852741bandeiradistritofederal.png'},
         { id: 18, nome: 'Bandeira - ES - Espírito Santo', preçoFF: 39.99, imagem: 'http://www.educadores.diaadia.pr.gov.br/modules/galeria/uploads/11/normal_1409852741bandeiraespiritosanto.png'},
         { id: 19, nome: 'Bandeira - GO - Goiás', preçoFF: 39.99, imagem: 'http://www.educadores.diaadia.pr.gov.br/modules/galeria/uploads/11/normal_1409852742bandeiragoias.png'},
-        { id: 20, nome: 'Bandeira - MA - Maranhão', preçoFF: 39.99, imagem: 'http://www.educadores.diaadia.pr.gov.br/modules/galeria/uploads/11/normal_1409852741bandeiradomaranhao.jpg'},
+        { id: 20, nome: 'Bandeira - MA - Maranhão', preçoFF: 39.99, imagem: 'https://pt.wikipedia.org/wiki/Maranhão#/media/Ficheiro:Bandeira_do_Maranhão.svg'},
         { id: 21, nome: 'Bandeira - MT - Mato Grosso', preçoFF: 39.99, imagem: 'http://www.educadores.diaadia.pr.gov.br/modules/galeria/uploads/11/normal_1409852742bandeiramatogrosso.png'},
         { id: 22, nome: 'Bandeira - MS - Mato Grosso do Sul', preçoFF: 39.99, imagem: 'http://www.educadores.diaadia.pr.gov.br/modules/galeria/uploads/11/normal_1409852744bandeira_Mato_Grosso_Sul.png'},
         { id: 23, nome: 'Bandeira - MG - Minas Gerais', preçoFF: 39.99, imagem: 'http://www.educadores.diaadia.pr.gov.br/modules/galeria/uploads/11/normal_1409852743Bandeira_de_Minas_Gerais.svg.png'},
@@ -121,9 +121,9 @@ export default function Produtos() {
         { id: 115, nome: 'Bandeira - Israel', preçoFF: 49.99, imagem: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/800px-Flag_of_Israel.svg.png'},
         { id: 116, nome: 'Bandeira - Palestina', preçoFF: 49.99, imagem: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Flag_of_Palestine.svg/1280px-Flag_of_Palestine.svg.png'},
         { id: 117, nome: 'Bandeira - Sacro Império Romano-Germânico', preçoFF: 49.99, imagem:'https://cdn11.bigcommerce.com/s-hhbbk/images/stencil/1280x1280/products/1939/42891/HIST0363__03551.1580527270.png?c=2'},
-        { id: 118, nome: 'Bandeira - Império Romano - V. 01', preçoFF: 49.99, imagem:'https://flagman.ie/flags/wp-content/uploads/2021/05/Roman-Empire-Flag.jpg'},
-        { id: 119, nome: 'Bandeira - Império Romano - V. 02', preçoFF: 49.99, imagem:'https://i.pinimg.com/originals/98/b0/38/98b038f4d7421a8fe498537fe8915a38.png'},
-        { id: 117, nome: '', preçoFF: 49.99, imagem:''},
+        { id: 118, nome: 'Bandeira - Império Romano', preçoFF: 49.99, imagem:'https://flagman.ie/flags/wp-content/uploads/2021/05/Roman-Empire-Flag.jpg'},
+        { id: 119, nome: 'Bandeira - Império Romano', preçoFF: 49.99, imagem:'https://i.pinimg.com/originals/98/b0/38/98b038f4d7421a8fe498537fe8915a38.png'},
+        { id: 120, nome: 'Bandeira - União Africana', preçoFF: 49.99, imagem: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Flag_of_the_African_Union.svg/1024px-Flag_of_the_African_Union.svg.png'}
     ]);
 
     const [listaPedidos, setListaPedidos] = useState([]);
@@ -152,25 +152,23 @@ export default function Produtos() {
     return (
         <div id="Switch">
             <>
-            <div class="pCard">
+            <div class="cardOut">
                 {
                     listaProdutos.map((produto) =>
-                        <div key={produto.id}>
+                        <div key={produto.id} class="pCard">
                             <img src={produto.imagem} class="pImage"/>
-                            <p>{produto.nome}</p>
-                            <p>R${produto.preçoFF}</p>
+                            <p class="pName">{produto.nome}</p>
+                            <p class="pPrice">R${produto.preçoFF}</p>
                             <button onClick={() => adicionarItemPedidos(produto)}>Adicionar ao Carrinho!</button>
                         </div>
                     )
                 }
-                </div>
-                <div class="pCard">
                 {
                     listaPedidos.map((produto) =>
-                        <div key={produto.id}>
+                        <div key={produto.id} class="pCard">
                             <img src={produto.imagem} class="pImage"/>
-                            <p>{produto.nome}</p>
-                            <p>R${produto.preçoFF}</p>
+                            <p class="pName">{produto.nome}</p>
+                            <p class="pPrice">R${produto.preçoFF}</p>
                             <button onClick={() => removerPedido(produto.id)}>Remover</button>
                         </div>
                     )
