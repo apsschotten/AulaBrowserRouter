@@ -1,5 +1,5 @@
 import Header from "../components/Header.jsx";
-import Produtos from "../components/Produtos.jsx";
+import Produtos from "../components/listaProdutos.jsx";
 import Footer from "../components/Footer.jsx";
 
 export default function Produto() {
