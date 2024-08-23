@@ -1,14 +1,21 @@
 import Header from "../components/Header.jsx";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import Produtos from "../components/listaProdutos.jsx";
+import HomeP from "../components/listaHome.jsx";
 import Footer from "../components/Footer.jsx";
 
 export default function Home() {
     return (
         <>
             <Header />
-            <Carousel>
+            <Carousel
+                infiniteLoop
+                useKeyboardArrows
+                autoPlay
+                showArrows={true}
+                showStatus={false}
+                showThumbs={false}
+                dynamicHeight>
                 <div>
                     <img src="src/images/Slide01.jpg" />
                 </div>
@@ -20,7 +27,7 @@ export default function Home() {
                 </div>
             </Carousel>
             <h1>Home</h1>
-            <Produtos />
+            <HomeP />
             <Footer />
         </>
     );

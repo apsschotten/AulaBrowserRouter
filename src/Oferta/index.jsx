@@ -1,5 +1,5 @@
 import Header from "../components/Header.jsx";
-import Produtos from "../components/listaProdutos.jsx";
+import Ofertas from "../components/listaOfertas.jsx";
 import Footer from "../components/Footer.jsx";
 
 export default function Oferta() {
@@ -7,7 +7,7 @@ export default function Oferta() {
         <>
             <Header />
             <h1>Ofertas</h1>
-            <Produtos />
+            <Ofertas />
             <Footer />
         </>
     );

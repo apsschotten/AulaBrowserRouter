@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './Home'
 import Produto from './Produto'
 import Oferta from './Oferta'
+import Carrinho from './Carrinho/Carrinho'
 import './globals.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -14,6 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/Home" element={<Home />} />
         <Route path="/Produto" element={<Produto />} />
         <Route path="/Oferta" element={<Oferta />} />
+        <Route path="/Carrinho" element={<Carrinho />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

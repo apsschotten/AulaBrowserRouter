@@ -43,6 +43,17 @@ footer{
     position: absolute;
 }
 
+.dPrice{
+    font-weight: lighter;
+    text-decoration: line-through;
+    font-size: 15px;
+    margin-bottom: -20px;
+}
+
+.hPrice{
+    font-weight: bold;
+}
+
 .pPrice{
     font-weight: bold;
 }
@@ -81,6 +92,7 @@ footer{
     align-items: center;
     justify-content: center;
     align-self: center;
+    margin-bottom: 35px;
 }
 
 li{
@@ -104,7 +116,7 @@ li{
 
 .bList{
     display: grid;
-    grid-template-columns: 175px 175px 175px;
+    grid-template-columns: 175px 175px 175px 175px;
     row-gap: 35px;
 }
 
