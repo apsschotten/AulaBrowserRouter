@@ -23,11 +23,6 @@ export default function Header() {
                         <li>Ofertas</li>
                     </Link>
                 </button>
-                <button class="bTop">
-                    <Link to="/carrinho">
-                        <li>Carrinho</li>
-                    </Link>
-                </button>
             </div>
         </header>
     );

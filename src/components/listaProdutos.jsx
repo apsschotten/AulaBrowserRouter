@@ -1,7 +1,4 @@
 import { useState } from "react";
-
-import Carrinho from "../Carrinho/Carrinho";
-
 import '../globals.css';
 
 export default function Produtos() {
